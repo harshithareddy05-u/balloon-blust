@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telugu Actor Balloon Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #880E4F;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        
+        #gameContainer {
+            position: relative;
+            width: 800px;
+            height: 600px;
+        }
+        
+        #gameCanvas {
+            background-color: #4A148C;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        #startScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            color: white;
+            z-index: 10;
+        }
+        
+        #gameTitle {
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #FF4081;
+            color: white;
+        }
+        
+        #startButton {
+            padding: 15px 30px;
+            font-size: 24px;
+            background-color: #FF4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #startButton:hover {
+            background-color: #C60055;
+            transform: scale(1.05);
+        }
+        
+        #instructions {
+            margin-top: 30px;
+            text-align: center;
+            max-width: 80%;
+            line-height: 1.5;
+        }
+        
+        #instructions h3 {
+            color: #FF4081;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 820px) {
+            #gameContainer {
+                width: 100%;
+                height: 100vh;
+            }
+            
+            #gameCanvas {
+                width: 100%;
+                height: 100%;
+            }
+            
+            #gameTitle {
+                font-size: 36px;
+            }
+            
+            #startButton {
+                padding: 12px 24px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="startScreen">
+            <h1 id="gameTitle">Telugu Actor Balloon Game</h1>
+            <button id="startButton">Start Game</button>
+            <div id="instructions">
+                <h3>How to Play</h3>
+                <p>Click on the Telugu actor balloons to pop them. Avoid letting them touch you!</p>
+                <p>Complete each level by popping all the balloons. The game gets harder as you progress.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="balloon.js"></script>
+</body>
+</html> 
